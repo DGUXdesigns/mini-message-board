@@ -28,6 +28,6 @@ app.use('/', indexRouter);
 app.use('/new', formRouter);
 
 // Listen for requests
-app.listen(PORT, () => {
+app.listen(PORT || 3000, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
