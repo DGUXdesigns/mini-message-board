@@ -2,17 +2,22 @@
   <%- include('./partials/head', { title: title }) %>
   <body>
     <%- include('./partials/header') %>
-    <h2>ChatterBox Message Board</h2>
-    <% if (messages.length > 0) { %> <% messages.forEach(message => { %>
-    <div class="msg">
-      <div class="msg-header">
-        <h3><%= message.user %></h3>
-        <p><%= message.added %></p>
+    <main>
+      <h2>ChatterBox Message Board</h2>
+      <div class="msg-board">
+        <% if (messages.length > 0) { %> <% messages.forEach(message => { %>
+
+        <div class="msg">
+          <div class="msg-header">
+            <h3><%= message.user %></h3>
+            <p class="date">posted <%= message.added %></p>
+          </div>
+          <p><%= message.text %></p>
+        </div>
+        <% }) %> <% } else { %>
       </div>
-      <p><%= message.text %></p>
-    </div>
-    <% }) %> <% } else { %>
-    <h2>No messages yet...</h2>
-    <% } %>
+      <h2>No messages yet...</h2>
+      <% } %>
+    </main>
   </body>
 </html>
