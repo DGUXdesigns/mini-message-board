@@ -1,0 +1,112 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid gray;
+  border-radius: 0.5rem;
+  background-color: #121212;
+}
+
+.msg-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Form container styling */
+form {
+  background-color: #121212;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 31.25rem;
+  min-width: 18.75rem;
+  border-radius: 2px solid gray;
+}
+
+/* Heading styling */
+form h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+/* Form control styling */
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.form-control label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-control input,
+.form-control textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.875rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease;
+  color: white;
+}
+
+.form-control textarea {
+  resize: none;
+  min-height: 12.5rem;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  border-color: rebeccapurple;
+  outline: none;
+}
+
+/* Button styling */
+form button {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  background-color: rebeccapurple;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: rgb(69, 34, 104);
+}
