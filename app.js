@@ -7,7 +7,7 @@ import formRouter from './routes/formRouter.js';
 
 config();
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const assetsPath = path.join(__dirname, 'public');
@@ -28,6 +28,6 @@ app.use('/', indexRouter);
 app.use('/new', formRouter);
 
 // Listen for requests
-app.listen(PORT || 3000, () => {
+app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
