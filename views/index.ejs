@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <title>ChatterBox | Home</title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% if (messages.length > 0) { %> <% messages.forEach(message => { %>
+    <div class="msg">
+      <div class="msg-header">
+        <h3><%= message.user %></h3>
+        <p><%= message.added %></p>
+      </div>
+      <p><%= message.text %></p>
+    </div>
+    <% }) %> <% } %>
+  </body>
+</html>
