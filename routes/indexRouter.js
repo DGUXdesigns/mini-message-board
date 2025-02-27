@@ -25,7 +25,17 @@ const messages = [
 ];
 
 indexRouter.get('/', (req, res) => {
-  res.render('index', { title: 'ChatterBox Message Board', messages });
+  res.render('index', { title: 'Mini Message Board | Home', messages });
+});
+
+indexRouter.post('/new', (req, res) => {
+  messages.push({
+    text: req.body.message,
+    user: req.body.user,
+    added: new Date(),
+  });
+
+  res.redirect('/');
 });
 
 export default indexRouter;
