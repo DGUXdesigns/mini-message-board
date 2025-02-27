@@ -39,6 +39,11 @@ header {
   background-color: black;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -47,8 +52,6 @@ nav {
 }
 
 nav a {
-  text-decoration: none;
-  color: white;
   padding: 0.25rem 0.875rem;
   border-radius: 0.5rem;
   transition: background-color 0.3s ease;
