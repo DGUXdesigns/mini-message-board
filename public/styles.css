@@ -21,8 +21,44 @@ body {
   justify-content: center;
   min-height: 100vh;
   gap: 2rem;
+  position: relative;
+  padding-top: 6.25rem;
 }
 
+/* navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid white;
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.25rem 0.875rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgb(102, 51, 153);
+}
+
+/* home page */
 .msg {
   display: flex;
   flex-direction: column;
